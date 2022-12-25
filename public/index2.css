@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+  
+  
+  
+  th,
+  td {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+  }
+  .container {
+    border-radius: 5px;
+    padding: 30px;
+    border-spacing: 10px;
+  }
+
+  button{
+    background-color: #47ccbf3f;
+    color:black;
+    padding: 12px 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  button:hover {
+    background-color: #169a80;
+    color: white;
+  }
+  

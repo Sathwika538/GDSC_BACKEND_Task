@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+</head>
+
+<body>
+  
+  <div>
+    <div class="container">
+    <h1 style="position: relative; bottom:70px;">Update here</h1>
+    <form action="/edit/<%= x.name%>?_method=put" method="post">
+    
+        <div class="row" >
+          <div class="col-25">
+            <label for="">Name:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" value="<%= x.name %>" name="name" placeholder="Name" required autocomplete="off">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="">Your Roll No:</label>
+           </div>
+          <div class="col-75">
+            <input type="text" value="<%= x.rollno %> " name="rollno" placeholder="Roll Number" required autocomplete="off">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="Gender">Gender:</label>
+           </div>
+            <div class="col-75 ">
+              <input type="radio" name="gender" id="male" value="Male" >
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="female" value="Female" >
+              <label for="female">Female</label>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label >Date of Birth:</label>
+          </div>
+         <div class="col-75">
+          <input type="date" name="dob" required value="<%= x.dob%>">
+         </div>
+         
+       
+        </div>
+        <button type="submit">Update</button>
+      </div>
+     
+      
+
+
+<!-- 
+        <label for="">Name:</label>
+        <input type="text" value="<%= x.name %>" name="name" placeholder="Name"><br>
+        <label for="">Roll Number:</label>
+        <input type="text" value="<%= x.rollno %>" name="rollno" placeholder="Roll Number"><br>
+        <label for="">Your College Name:</label>
+        <input type="text" value="<%= x.college %>" name="college" placeholder="College"><br>
+        <label >Age:</label>
+        <input type="number" name="age" value="<%= x.age %>" placeholder="Age"><br>
+     
+          <button type="submit">Update</button> -->
+          
+    </form>
+  </div>
+
+</body>
+
+</html>

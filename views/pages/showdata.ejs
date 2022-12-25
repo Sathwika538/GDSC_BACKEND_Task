@@ -1,0 +1,47 @@
+
+<html >
+  <head>
+    <%- include('../partials/head2'); %>
+  </head>
+<body>
+  
+  <div class="container">
+    <h1>Submitted Data</h1>
+     
+    <div class="container">
+      <table>
+        <thead>
+        
+            <th scope="col"><h4>Name</h4></th>
+            <th scope="col"><h4>Roll Number</h4></th>
+            <th scope="col"><h4>Gender</h4></th>
+            <th scope="col"><h4>Date of Birth</h4></th>
+          
+        </thead>
+        <tbody>
+          <% records.forEach((row)=>{ %>
+            <tr>
+          <td><%= row.name %> </td>
+          <td><%= row.rollno %></td>
+          <td><%= row.gender %></td>
+          <td><%= row.dob %></td>
+          <td> <button onclick="document.location='/edit/<%= row.name%>'" type="submit" >Edit</button></td>
+          
+          <td>
+            <form action="/delete/<%= row.name%>?_method=delete" method="post">
+              <button onclick="document.location='/alldata'" type="submit" >Delete</button>
+
+            </form>
+          </td>
+          <!-- <td><a>Delete</a></td> -->
+        </tr>
+      <%  }) %> 
+      
+        </tbody>
+       
+       
+      </table>
+    </div>
+  </div>
+</body>
+</html>
